@@ -1,0 +1,502 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>王馨蔚 · 个人简历</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = { theme: { extend: { colors: { primary: { DEFAULT: '#ff6b6b', foreground: '#ffffff' } } } } };
+</script>
+<style>
+  body {
+    background: linear-gradient(180deg, #fff8e7 0%, #fef6e8 20%, #fff0e8 40%, #fef0f4 60%, #fff5e6 80%, #fff8e7 100%);
+    font-family: 'PingFang SC', 'Microsoft YaHei', sans-serif;
+    min-height: 100vh;
+  }
+  .gradient-text {
+    background: linear-gradient(135deg, #ff6b6b, #ec4899, #f59e0b);
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+  }
+  .card-hover { transition: all 0.3s ease; }
+  .card-hover:hover { transform: translateY(-2px); box-shadow: 0 12px 32px rgba(255,107,107,0.12); }
+  .thought-card { cursor: pointer; transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); }
+  .thought-card.active { background: linear-gradient(135deg, #fff 0%, #fff5f0 100%); border-color: #ff6b6b; }
+  .thought-card.active .thought-num { background: linear-gradient(135deg, #ff6b6b, #ec4899); color: white; }
+  .thought-body { max-height: 0; overflow: hidden; transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1); }
+  .thought-card.active .thought-body { max-height: 2000px; }
+  .highlight { color: #ff6b6b; font-weight: bold; }
+  .flow-arrow { width: 0; height: 0; border-left: 12px solid transparent; border-right: 12px solid transparent; border-top: 14px solid #ff6b6b; }
+</style>
+</head>
+<body class="text-gray-800">
+
+<header class="sticky top-0 bg-white/90 backdrop-blur-lg border-b border-pink-100 z-50">
+  <div class="max-w-5xl mx-auto px-6 py-3 flex items-center justify-between">
+    <span class="font-bold text-xl gradient-text">王馨蔚 · 个人简历</span>
+    <div class="flex gap-3">
+      <button onclick="window.print()" class="px-4 py-2 text-sm bg-pink-50 border border-pink-200 rounded-full hover:bg-pink-100">🖨️ 打印</button>
+      <a href="index.html" class="px-4 py-2 text-sm bg-gradient-to-r from-primary to-pink-400 text-white rounded-full shadow-md hover:shadow-lg">← 返回作品集</a>
+    </div>
+  </div>
+</header>
+
+<main class="max-w-4xl mx-auto px-6 py-10 space-y-10">
+
+  <!-- 个人信息 -->
+  <section class="bg-white/80 backdrop-blur-sm rounded-3xl p-8 lg:p-10 border-2 border-pink-100 shadow-xl">
+    <div class="flex flex-col md:flex-row gap-8 items-start">
+      <div class="shrink-0">
+        <div class="w-40 h-52 rounded-2xl overflow-hidden border-4 border-white shadow-lg">
+          <img src="images/avatar-2.jpg" alt="王馨蔚" class="w-full h-full object-cover" onerror="this.parentElement.innerHTML='<div class=\'w-full h-full flex items-center justify-center text-6xl bg-gradient-to-br from-pink-100 to-amber-100\'>👩‍💻</div>'"/>
+        </div>
+      </div>
+      <div class="flex-1 space-y-3">
+        <div>
+          <h1 class="text-4xl font-extrabold gradient-text mb-1">王馨蔚</h1>
+          <p class="text-sm text-pink-400 font-semibold">2027届校招生 · 产品运营 / 市场营销 / 用户增长 / 策略运营</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm">
+          <div>📱 178-4110-7250</div>
+          <div>📧 18302819592@163.com</div>
+          <div>💬 a13394478017（微信）</div>
+          <div>🏠 吉林长春 · 期待：京 / 深 / 沪 / 杭</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 教育背景 -->
+  <section>
+    <h2 class="text-2xl font-bold mb-5 gradient-text flex items-center gap-2"><span>🎓</span> 教育背景</h2>
+    <div class="grid md:grid-cols-2 gap-4">
+      <div class="bg-white/80 backdrop-blur-sm rounded-2xl p-6 border-2 border-pink-100 card-hover">
+        <div class="flex items-start justify-between mb-3">
+          <div><h3 class="text-lg font-bold">香港中文大学（深圳）</h3><p class="text-xs text-gray-500">CUHK, Shenzhen</p></div>
+          <span class="text-xs px-2 py-1 bg-amber-100 text-amber-700 rounded-full font-semibold">🏫 QS #18</span>
+        </div>
+        <p class="text-sm font-semibold">市场学理学硕士（AI方向）</p>
+        <p class="text-xs text-gray-500 mb-3">2025.09 - 2027.06</p>
+        <p class="text-xs text-gray-600">核心课程：客户关系管理，数字时代的营销研究，数字与社交媒体社交，大数据市场营销策略</p>
+      </div>
+      <div class="bg-white/80 backdrop-blur-sm rounded-2xl p-6 border-2 border-blue-100 card-hover">
+        <div class="flex items-start justify-between mb-3">
+          <div><h3 class="text-lg font-bold">西南财经大学</h3><p class="text-xs text-gray-500">SWUFE</p></div>
+          <span class="text-xs px-2 py-1 bg-blue-100 text-blue-700 rounded-full font-semibold">🏫 211 双一流</span>
+        </div>
+        <p class="text-sm font-semibold">精算学 本科</p>
+        <p class="text-xs text-gray-500 mb-1">2021.09 - 2025.06</p>
+        <p class="text-sm font-bold text-yellow-600">GPA: 3.7 &nbsp; 综合排名：2/41 (5%)</p>
+        <div class="mt-2 space-y-0.5 text-xs text-gray-600">
+          <p>🏆 全国大学生数学竞赛 四川省二等奖</p>
+          <p>🏆 第十届全国统计建模大赛 四川省三等奖</p>
+          <p>🏆 大学生创新创业项目国家级立项</p>
+          <p>🏆 甲等学业奖学金（Top1）· 优秀学生干部</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 实习经历 -->
+  <section>
+    <h2 class="text-2xl font-bold mb-5 gradient-text flex items-center gap-2"><span>💼</span> 实习经历</h2>
+    <div class="space-y-5">
+
+      <div class="bg-white/80 backdrop-blur-sm rounded-2xl p-6 border-l-4 border-red-400 card-hover">
+        <div class="flex items-start justify-between mb-2">
+          <div class="flex items-center gap-3"><span class="text-3xl">🐶</span><div><h3 class="text-lg font-bold">京东集团股份有限公司</h3><p class="text-xs text-gray-500">京东科技 · 车险业务组 · 增长策略运营实习生</p></div></div>
+          <span class="text-xs px-2 py-1 bg-red-50 text-red-700 rounded-full whitespace-nowrap">2026.05 - 2026.08</span>
+        </div>
+        <p class="text-sm text-gray-700 leading-relaxed mb-3">以Q3保费<strong>6.5亿</strong>、报价成功量<strong>178万</strong>为目标运营车险用户全生命周期，分用户增长、车险差异化运营、转化链路优化三大核心方向，搭建运营策略并持续迭代产品功能，最大化保费增量。</p>
+        <div class="space-y-2 text-sm text-gray-700">
+          <p><strong>· 增长策略与产品功能迭代：</strong>一方面围绕三大目标推进产品需求落地：用户增长方向输出首页窗口期卡片人群扩量、动态素材透传、618营销配套需求；差异化运营方向启动车主服务阵地0-1搭建；转化链路优化方向推进车险四合一页面改造及衍生需求。独立撰写15+份BRD，输出完整用户路径与交互方案，协调产研设计完成需求评审与排期；另一方面搭建用户分层运营体系，设计多元化权益策略，提升用户报价与转化水平。</p>
+          <p><strong>· 重点项目落地与效果验证：</strong>负责并落地上述规划中两大核心项目并追踪业务成效，推进首页卡片人群扩量与素材迭代，曝光提升300万量级，CTR提升3%，日均保费增收10万元，月度保费增加218.2万元；推进车险四合一页面链路改造，一期汇总51项走查问题，在核心点位开展AB测试，独立落地二期报价抽奖功能迭代，报价率提升6.5%、提核率提升10%、报价成功转化率提升2%。</p>
+          <p><strong>· AI赋能车险增长运营：</strong>输出车险对话Agent与「AI猜保费」创新链路BRD，完成交互方案设计并交付Demo；搭建AI数据推送预警机制，规范数据清洗、阈值计算、分级告警与基线更新规则，自动化监控渠道报价指标波动，快速识别业务异常并及时调整策略，实现运营监控提效。</p>
+        </div>
+      </div>
+
+      <div class="bg-white/80 backdrop-blur-sm rounded-2xl p-6 border-l-4 border-blue-400 card-hover">
+        <div class="flex items-start justify-between mb-2">
+          <div class="flex items-center gap-3"><span class="text-3xl">🎵</span><div><h3 class="text-lg font-bold">北京字节跳动科技有限公司</h3><p class="text-xs text-gray-500">TRAE · 用户运营实习生（开发者AI）</p></div></div>
+          <span class="text-xs px-2 py-1 bg-blue-50 text-blue-700 rounded-full whitespace-nowrap">2025.12 - 2026.04</span>
+        </div>
+        <p class="text-sm text-gray-700 leading-relaxed mb-3">以拓展产品用户规模、迭代产品功能为目标，国内通过社群运营维护C端开发者并引导沉淀至中文社区，海外依托社交媒体宣传引流，实现海内外用户双向增长。</p>
+        <div class="space-y-2 text-sm text-gray-700">
+          <p><strong>· 社群运营与用户增长：</strong>负责8个飞书社群（累计3万+ C端开发者用户）的运营，累计策划并落地40+场干货分享等活动；挖掘核心用户需求并建联1000+活跃用户，完善管理员激励政策；主导TRAE一周年活动，定向建联300+用户并带动15%用户新增，提升产品声量。</p>
+          <p><strong>· 社区0-1搭建与冷启动：</strong>深度参与TRAE官网社区0-1冷启动活动策划，主导「社群-社区」引流与运营体系搭建；负责社区板块规划及内容同步，首日上线活跃用户4000+，7天累计访问10.8k；同时优化答疑响应机制稳定在1分钟内，提升社区活跃度与用户体验。</p>
+          <p><strong>· 海外社媒与产品GTM运营：</strong>负责X、Instagram、LinkedIn海外社媒运营，搭建五大内容模块SOP，产出180+条内容，依托流量复盘持续优化传播方案；深度参与SOLO产品海外GTM全流程运营，统筹预热、发布、传播全周期节奏，优化宣传物料并监控曝光数据，扩大产品海外品牌声量。</p>
+        </div>
+      </div>
+
+      <div class="bg-white/80 backdrop-blur-sm rounded-2xl p-6 border-l-4 border-teal-400 card-hover">
+        <div class="flex items-start justify-between mb-2">
+          <div class="flex items-center gap-3"><span class="text-3xl">🏠</span><div><h3 class="text-lg font-bold">自如寓（北京）住房租赁有限公司</h3><p class="text-xs text-gray-500">自如比邻运营部 · 用户增长实习生</p></div></div>
+          <span class="text-xs px-2 py-1 bg-teal-50 text-teal-700 rounded-full whitespace-nowrap">2024.10 - 2025.01</span>
+        </div>
+        <p class="text-sm text-gray-700 leading-relaxed mb-3">以扩大澳洲租房业务成交规模为目标，运营15家供应商保障房源供给并通过私域渠道挖掘用户，持续提升房源点击率与订单转化。</p>
+        <div class="space-y-2 text-sm text-gray-700">
+          <p><strong>· 澳洲供应商管理与增长优化：</strong>针对澳洲租房市场资源分散、转化低效问题，搭建标准化供应商运营增长体系。全英对接15家供应商打通全流程履约与服务机制，通过数据复盘优化房源排序匹配策略，提升用户浏览体验，实现供应商续约率92%、房源点击率提升27%。</p>
+          <p><strong>· 用户运营与推广策略落地：</strong>负责C端用户挖掘与转化增长，依托小红书渠道精准引流获客。搭建三维用户分层画像，对标竞品输出差异化增长策略；落地用户调研与素材运营，产出12套推广方案，海报曝光超5万次，活动参与度提升40%，驱动市场订单转化增长31%。</p>
+        </div>
+      </div>
+
+      <div class="bg-white/70 backdrop-blur-sm rounded-2xl p-6 border-l-4 border-gray-400 card-hover">
+        <div class="flex items-start justify-between mb-2">
+          <div class="flex items-center gap-3"><span class="text-3xl">🌐</span><div><h3 class="text-lg font-bold">Glocal Link</h3><p class="text-xs text-gray-500">海外广告运营实习生</p></div></div>
+          <span class="text-xs px-2 py-1 bg-gray-100 text-gray-600 rounded-full whitespace-nowrap">2025.03 - 2025.06</span>
+        </div>
+        <div class="space-y-2 text-sm text-gray-700">
+          <p>用Excel高级功能整合广告账户多源数据，搭建「实时监控-异常预警」体系，支撑风控与投放策略优化；按「地区-行业-时效」分类海外市场信息，搭建可视化资源库；设计消耗看板、开户进度表替代文字汇报，优化跨部门沟通。最终广告ROI提升18%、封户响应时效缩短30%；团队获取海外动态时长从2天缩至4小时；跨部门沟通周期减少25%，保障3个核心广告项目落地。</p>
+        </div>
+      </div>
+
+      <div class="bg-white/70 backdrop-blur-sm rounded-2xl p-6 border-l-4 border-violet-400 card-hover">
+        <div class="flex items-start justify-between mb-2">
+          <div class="flex items-center gap-3"><span class="text-3xl">💻</span><div><h3 class="text-lg font-bold">深圳市蓝凌软件股份有限公司</h3><p class="text-xs text-gray-500">西南大区 · 市场营销实习生</p></div></div>
+          <span class="text-xs px-2 py-1 bg-violet-100 text-violet-700 rounded-full whitespace-nowrap">2024.05 - 2024.08</span>
+        </div>
+        <div class="space-y-2 text-sm text-gray-700">
+          <p>主导西南大区百人线下活动全流程（策划、会务对接、现场控场），备3套应急方案，参与人数120+、客户满意度95%，带动产品咨询量增60%；用PS/秀米制作32篇公众号推文、18张海报，优化内容后阅读量涨50%至800+；整理行业动态并输出2份竞品分析报告，纳入部门策略库支撑2个推广方案落地。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 项目经历 -->
+  <section>
+    <h2 class="text-2xl font-bold mb-5 gradient-text flex items-center gap-2"><span>🛠️</span> 项目经历</h2>
+    <div class="space-y-4">
+      <div class="bg-white/80 backdrop-blur-sm rounded-2xl p-6 border-2 border-pink-100 card-hover">
+        <div class="flex items-start justify-between mb-2"><h3 class="font-bold">参半品牌AI全流程推广方案</h3><span class="text-xs text-gray-500">2025.09 - 2025.12</span></div>
+        <p class="text-sm text-gray-700">参与学校小组项目，选定参半品牌策划AI全流程推广方案，结合品牌特性将学生群体定为核心目标受众，拟定精准的用户画像分层及定位；负责6个动画风AI视频全流程制作。</p>
+      </div>
+      <div class="bg-white/80 backdrop-blur-sm rounded-2xl p-6 border-2 border-pink-100 card-hover">
+        <div class="flex items-start justify-between mb-2"><h3 class="font-bold">第十四届中国风险管理与精算论坛 · 全国一等奖</h3><span class="text-xs text-gray-500">2023.07</span></div>
+        <p class="text-sm text-gray-700">参与设计「千里烟波」农业收入保险项目，聚焦立体农业与复合种植场景，借鉴美国全农场收入保障模式完成产品方案设计。进行产品适用性分析，并结合农业经营特点输出市场端建议。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 京东重点项目 -->
+  <section>
+    <h2 class="text-2xl font-bold mb-5 gradient-text flex items-center gap-2"><span>🐶</span> 京东 · 重点项目</h2>
+    <div class="space-y-5">
+
+      <!-- ============ 项目1：四合一车险链路优化 ============ -->
+      <div class="bg-white/80 backdrop-blur-sm rounded-2xl p-6 border-2 border-red-100 card-hover">
+        <h3 class="font-bold text-lg mb-3 flex items-center gap-2">
+          <span class="w-7 h-7 rounded-full bg-red-400 text-white flex items-center justify-center text-sm font-bold shrink-0">1</span>
+          四合一车险链路优化项目
+        </h3>
+
+        <!-- 上线节奏时间线 -->
+        <div class="mb-4">
+          <p class="text-xs font-bold text-red-600 mb-2">📅 上线节奏：</p>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-2">
+            <div class="bg-red-50 border-l-4 border-red-400 rounded p-3">
+              <p class="text-xs font-bold text-red-700">5/27</p>
+              <p class="text-xs text-gray-700 mt-1">四合一页面第一版上线（纯报价流程，无营销模块）</p>
+            </div>
+            <div class="bg-amber-50 border-l-4 border-amber-400 rounded p-3">
+              <p class="text-xs font-bold text-amber-700">5/28</p>
+              <p class="text-xs text-gray-700 mt-1">收集51个走查问题：🐛Bug 17 · 🎨交互 15 · ⚡待优化 19</p>
+            </div>
+            <div class="bg-emerald-50 border-l-4 border-emerald-400 rounded p-3">
+              <p class="text-xs font-bold text-emerald-700">5/29</p>
+              <p class="text-xs text-gray-700 mt-1">小首页icon点位上线，首次数据测试（观测反馈+全链路数据）</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- AB测试各利益点表现（截图展示）-->
+        <p class="text-xs font-bold text-red-600 mb-2">📊 AB测试各利益点表现：</p>
+        <div class="overflow-x-auto mb-5">
+          <img src="images/ab-test-table.png" alt="AB测试各利益点表现表格" class="w-full rounded-lg border border-gray-200 shadow-sm" onerror="this.parentElement.innerHTML='<table class=\'w-full text-xs border-collapse bg-white rounded-lg overflow-hidden border border-gray-200\'><thead class=\'bg-gradient-to-r from-red-100 to-pink-100\'><tr><th class=\'py-2 px-2 text-left font-bold text-gray-700\'>利益点</th><th class=\'py-2 px-2 text-right font-bold text-gray-700\'>报价用户占比</th><th class=\'py-2 px-2 text-right font-bold text-gray-700\'>成单占比</th><th class=\'py-2 px-2 text-right font-bold text-gray-700\'>保费占比</th></tr></thead><tbody><tr class=\'border-t border-gray-100\'><td class=\'py-2 px-2 font-semibold\'>0.1元服务+</td><td class=\'py-2 px-2 text-right\'>6.05%</td><td class=\'py-2 px-2 text-right text-pink-600 font-bold\'>20.16%</td><td class=\'py-2 px-2 text-right text-pink-600 font-bold\'>20.90%</td></tr><tr class=\'border-t border-gray-100 bg-red-50/20\'><td class=\'py-2 px-2 font-semibold\'>报价成功抽奖 ⭐</td><td class=\'py-2 px-2 text-right\'>7.97%</td><td class=\'py-2 px-2 text-right text-pink-600 font-bold\'>22.25%</td><td class=\'py-2 px-2 text-right text-pink-600 font-bold\'>22.98%</td></tr><tr class=\'border-t border-gray-100\'><td class=\'py-2 px-2 font-semibold\'>报价成功送权益</td><td class=\'py-2 px-2 text-right\'>10.05%</td><td class=\'py-2 px-2 text-right\'>1.05%</td><td class=\'py-2 px-2 text-right\'>1.03%</td></tr><tr class=\'border-t border-gray-100\'><td class=\'py-2 px-2 font-semibold\'>送免息券</td><td class=\'py-2 px-2 text-right\'>8.26%</td><td class=\'py-2 px-2 text-right text-pink-600 font-bold\'>28.70%</td><td class=\'py-2 px-2 text-right text-pink-600 font-bold\'>33.00%</td></tr><tr class=\'border-t border-gray-200 bg-gray-50\'><td class=\'py-2 px-2 font-semibold text-gray-500\'>（未转化）</td><td class=\'py-2 px-2 text-right text-gray-500\'>32.09%</td><td class=\'py-2 px-2 text-right text-gray-500\'>22.36%</td><td class=\'py-2 px-2 text-right text-gray-500\'>22.10%</td></tr><tr class=\'border-t-2 border-gray-300 bg-red-100 font-bold\'><td class=\'py-2 px-2 text-red-700\'>总计</td><td class=\'py-2 px-2 text-right text-red-700\'>64.42%</td><td class=\'py-2 px-2 text-right text-red-700\'>94.52%</td><td class=\'py-2 px-2 text-right text-red-700\'>100.00%</td></tr></tbody></table>'"/>
+        </div>
+
+        <!-- AB测试表格2：替换效果 -->
+        <p class="text-xs font-bold text-red-600 mb-2">🔄 AB测试替换结果：</p>
+        <div class="overflow-x-auto mb-4">
+          <table class="w-full text-xs border-collapse bg-white rounded-lg overflow-hidden border border-gray-200">
+            <thead class="bg-gradient-to-r from-emerald-100 to-teal-100">
+              <tr>
+                <th class="py-2 px-2 text-left font-bold text-gray-700">是否可替换</th>
+                <th class="py-2 px-2 text-right font-bold text-gray-700">报价用户占比</th>
+                <th class="py-2 px-2 text-right font-bold text-gray-700">成单占比</th>
+                <th class="py-2 px-2 text-right font-bold text-gray-700">保费占比</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="border-t border-gray-100 bg-amber-50/30"><td class="py-2 px-2 font-semibold text-amber-700">❌ 否（仅报价抽奖一期无法替换）</td><td class="py-2 px-2 text-right">32.09%</td><td class="py-2 px-2 text-right">22.36%</td><td class="py-2 px-2 text-right">22.10%</td></tr>
+              <tr class="border-t border-gray-100 bg-emerald-50/30"><td class="py-2 px-2 font-semibold text-emerald-700">✅ 是</td><td class="py-2 px-2 text-right">32.33%</td><td class="py-2 px-2 text-right text-emerald-600 font-bold">72.16%</td><td class="py-2 px-2 text-right text-emerald-600 font-bold">77.90%</td></tr>
+              <tr class="border-t-2 border-gray-300 bg-red-100 font-bold"><td class="py-2 px-2 text-red-700">总计</td><td class="py-2 px-2 text-right text-red-700">64.42%</td><td class="py-2 px-2 text-right text-red-700">94.52%</td><td class="py-2 px-2 text-right text-red-700">100.00%</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- 成果 -->
+        <div class="bg-gradient-to-r from-red-100 to-pink-100 border-l-4 border-red-500 rounded-lg p-3 mb-3">
+          <p class="text-xs font-bold text-red-700 mb-1">🎯 最终成果：</p>
+          <p class="text-xs text-gray-800">测试结果：报价成功提核率明显提升，<strong class="text-red-600">至高24.59%</strong>，报价成功转化率提升在<strong>1-2pp</strong>之间。量最大的搜索直达渠道贡献了大部分核心指标提升。</p>
+        </div>
+
+        <!-- 页面链接按钮 -->
+        <a href="https://che.tjjt360.com/insurance/carInsMall/homePro?merchantNo=1018120002&sourceType=JDAPP&resourcePlace=JDBX_QC_SKU_12QMX_cxyhd" target="_blank" class="inline-flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-red-400 to-pink-400 text-white rounded-full font-semibold text-sm shadow-md hover:shadow-lg hover:scale-105 transition-all">
+          🔗 访问四合一页面 Demo
+        </a>
+      </div>
+
+      <!-- ============ 项目2：车主服务0-1搭建 ============ -->
+      <div class="bg-white/80 backdrop-blur-sm rounded-2xl p-6 border-2 border-amber-100 card-hover">
+        <h3 class="font-bold text-lg mb-3 flex items-center gap-2">
+          <span class="w-7 h-7 rounded-full bg-amber-400 text-white flex items-center justify-center text-sm font-bold shrink-0">2</span>
+          车主服务0-1搭建项目
+        </h3>
+
+        <div class="grid md:grid-cols-[220px_1fr] gap-5 items-start">
+          <!-- 左侧：车主服务两张截图（横排，缩短高度）-->
+          <div class="flex gap-2">
+            <img src="images/carowner-1.jpg" alt="车主服务首页" class="w-1/2 rounded-lg border-2 border-white shadow-md object-cover" style="max-height: 280px;"/>
+            <img src="images/carowner-2.jpg" alt="车主服务推荐" class="w-1/2 rounded-lg border-2 border-white shadow-md object-cover" style="max-height: 280px;"/>
+          </div>
+
+          <!-- 右侧：项目描述（格式优化）-->
+          <div class="space-y-4">
+            <!-- 项目概述 -->
+            <p class="text-sm leading-relaxed text-gray-700">
+              在京东车险业务中启动<span class="highlight">车主服务阵地</span>从0到1的搭建工作，作为<span class="highlight">差异化运营方向</span>的核心项目。
+            </p>
+            <p class="text-sm leading-relaxed text-gray-700">
+              完成完整的<span class="highlight">产品方案设计与UI设计稿输出</span>，规划车主生态服务入口，以<span class="highlight">延长用户生命周期、提升平台粘性</span>为目标，构建围绕车主高频需求的服务矩阵。
+            </p>
+
+            <!-- 核心设计思路 -->
+            <div>
+              <p class="text-xs font-bold text-amber-700 mb-2 flex items-center gap-1">
+                <span>🎯</span> 核心设计思路
+              </p>
+              <div class="flex flex-wrap gap-1.5">
+                <span class="px-2.5 py-1 bg-amber-100 text-amber-700 rounded-full text-xs font-medium">车主高频场景</span>
+                <span class="px-2.5 py-1 bg-amber-100 text-amber-700 rounded-full text-xs font-medium">服务宫格化</span>
+                <span class="px-2.5 py-1 bg-amber-100 text-amber-700 rounded-full text-xs font-medium">生态联动</span>
+                <span class="px-2.5 py-1 bg-amber-100 text-amber-700 rounded-full text-xs font-medium">权益分层</span>
+              </div>
+            </div>
+
+            <!-- 业务价值 -->
+            <div class="bg-amber-50 border-l-4 border-amber-400 rounded-lg p-3.5">
+              <p class="text-xs font-bold text-amber-700 mb-1.5 flex items-center gap-1">
+                <span>🌟</span> 业务价值
+              </p>
+              <p class="text-xs leading-relaxed text-gray-700">
+                覆盖加油、停车、保养、救援等<strong>8大高频服务场景</strong>，通过服务宫格化降低用户决策成本，搭配个性化推荐算法提升服务发现率，构建<span class="highlight">车险→车主服务的全生命周期闭环</span>。
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ============ 项目3：AI预警系统（含流程图） ============ -->
+      <div class="bg-white/80 backdrop-blur-sm rounded-2xl p-6 border-2 border-cyan-100 card-hover">
+        <h3 class="font-bold text-lg mb-3 flex items-center gap-2">
+          <span class="w-7 h-7 rounded-full bg-cyan-400 text-white flex items-center justify-center text-sm font-bold shrink-0">3</span>
+          AI大数据预警系统
+        </h3>
+
+        <!-- 流程图 -->
+        <div class="mb-5 p-4 bg-gradient-to-br from-cyan-50 to-blue-50 rounded-2xl border border-cyan-200">
+          <p class="text-xs font-bold text-cyan-700 mb-3 text-center">🔄 AI预警系统流程图</p>
+          <div class="flex flex-wrap items-center justify-center gap-2 text-xs">
+            <!-- Step 1 -->
+            <div class="bg-white rounded-lg p-2.5 shadow-sm border-2 border-cyan-300 text-center min-w-[90px]">
+              <div class="text-lg">📊</div>
+              <div class="font-bold text-cyan-700 text-[10px] mt-0.5">① 数据采集</div>
+              <div class="text-[9px] text-gray-500 mt-0.5">每日渠道报价/成功数据</div>
+            </div>
+            <div class="text-cyan-400">→</div>
+            <!-- Step 2 -->
+            <div class="bg-white rounded-lg p-2.5 shadow-sm border-2 border-blue-300 text-center min-w-[90px]">
+              <div class="text-lg">🧮</div>
+              <div class="font-bold text-blue-700 text-[10px] mt-0.5">② IQR异常剔除</div>
+              <div class="text-[9px] text-gray-500 mt-0.5">Q1-1.5×IQR ~ Q3+1.5×IQR</div>
+            </div>
+            <div class="text-cyan-400">→</div>
+            <!-- Step 3 -->
+            <div class="bg-white rounded-lg p-2.5 shadow-sm border-2 border-emerald-300 text-center min-w-[90px]">
+              <div class="text-lg">📐</div>
+              <div class="font-bold text-emerald-700 text-[10px] mt-0.5">③ 基线建立</div>
+              <div class="text-[9px] text-gray-500 mt-0.5">均值/std/P10 + 月度更新</div>
+            </div>
+            <div class="text-cyan-400">→</div>
+            <!-- Step 4 -->
+            <div class="bg-white rounded-lg p-2.5 shadow-sm border-2 border-amber-300 text-center min-w-[90px]">
+              <div class="text-lg">🔍</div>
+              <div class="font-bold text-amber-700 text-[10px] mt-0.5">④ 每日对比</div>
+              <div class="text-[9px] text-gray-500 mt-0.5">当日 vs 基线</div>
+            </div>
+            <div class="text-cyan-400">→</div>
+            <!-- Step 5 -->
+            <div class="bg-white rounded-lg p-2.5 shadow-sm border-2 border-rose-300 text-center min-w-[90px]">
+              <div class="text-lg">🚨</div>
+              <div class="font-bold text-rose-700 text-[10px] mt-0.5">⑤ 触发告警</div>
+              <div class="text-[9px] text-gray-500 mt-0.5">6类规则匹配</div>
+            </div>
+            <div class="text-cyan-400">→</div>
+            <!-- Step 6 -->
+            <div class="bg-white rounded-lg p-2.5 shadow-sm border-2 border-purple-300 text-center min-w-[90px]">
+              <div class="text-lg">📤</div>
+              <div class="font-bold text-purple-700 text-[10px] mt-0.5">⑥ 分级响应</div>
+              <div class="text-[9px] text-gray-500 mt-0.5">P0/P1/P2 推送</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 6个模块详细说明 -->
+        <div class="grid md:grid-cols-2 gap-3 mb-4">
+          <div class="bg-cyan-50 border-l-4 border-cyan-400 rounded p-3">
+            <p class="text-xs font-bold text-cyan-700 mb-1">📊 ① 数据采集</p>
+            <p class="text-xs text-gray-700">每日10:00拉取前一日13个渠道的报价量、成功量、成功率数据，标准化清洗入库。</p>
+          </div>
+          <div class="bg-blue-50 border-l-4 border-blue-400 rounded p-3">
+            <p class="text-xs font-bold text-blue-700 mb-1">🧮 ② IQR异常剔除</p>
+            <p class="text-xs text-gray-700">用IQR方法剔除36个异常日（分布在13个渠道），基线不被异常污染，去异常后大部分渠道CV降至<strong>15%以下</strong>。</p>
+          </div>
+          <div class="bg-emerald-50 border-l-4 border-emerald-400 rounded p-3">
+            <p class="text-xs font-bold text-emerald-700 mb-1">📐 ③ 基线建立</p>
+            <p class="text-xs text-gray-700">用清洗后的"正常日"数据计算均值、标准差、P10等统计量，建议每月初滚动更新基线。</p>
+          </div>
+          <div class="bg-amber-50 border-l-4 border-amber-400 rounded p-3">
+            <p class="text-xs font-bold text-amber-700 mb-1">🔍 ④ 每日对比</p>
+            <p class="text-xs text-gray-700">当日数据与"正常基线"对比，偏离即触发告警——被剔除的那些异常日，正是告警要捕获的目标。</p>
+          </div>
+          <div class="bg-rose-50 border-l-4 border-rose-400 rounded p-3">
+            <p class="text-xs font-bold text-rose-700 mb-1">🚨 ⑤ 触发告警（6类规则）</p>
+            <p class="text-xs text-gray-700">
+              R1绝对值下限 / R2成功量下限 / R3成功率下限 / R4异常高值 / R5连续低位 / R6成功率持续低
+            </p>
+          </div>
+          <div class="bg-purple-50 border-l-4 border-purple-400 rounded p-3">
+            <p class="text-xs font-bold text-purple-700 mb-1">📤 ⑥ 分级响应</p>
+            <p class="text-xs text-gray-700">🔴P0 1小时内响应 · 🔴P1 当日确认 · 🟡P2 观察1-2天，自动推送到飞书群。</p>
+          </div>
+        </div>
+
+        <!-- 渠道速查表 -->
+        <details class="bg-white border border-cyan-200 rounded-lg">
+          <summary class="cursor-pointer px-4 py-2.5 text-xs font-bold text-cyan-700 hover:bg-cyan-50">📋 查看分渠道监控速查表（高/中/低量级梯队）</summary>
+          <div class="overflow-x-auto p-3">
+            <table class="w-full text-xs border-collapse">
+              <thead class="bg-cyan-50">
+                <tr>
+                  <th class="py-1.5 px-2 text-left font-bold text-cyan-700">梯队</th>
+                  <th class="py-1.5 px-2 text-left font-bold text-cyan-700">渠道</th>
+                  <th class="py-1.5 px-2 text-right font-bold text-cyan-700">日均报价</th>
+                  <th class="py-1.5 px-2 text-right font-bold text-cyan-700">CV%</th>
+                  <th class="py-1.5 px-2 text-right font-bold text-cyan-700">告警占比</th>
+                  <th class="py-1.5 px-2 text-left font-bold text-cyan-700">策略</th>
+                </tr>
+              </thead>
+              <tbody class="text-xs">
+                <tr class="border-t border-cyan-100 bg-emerald-50/30"><td class="py-1 px-2 font-bold text-emerald-700">高</td><td class="py-1 px-2">商城增长</td><td class="py-1 px-2 text-right">17,795</td><td class="py-1 px-2 text-right text-emerald-600 font-bold">3.7%</td><td class="py-1 px-2 text-right">95.3%</td><td class="py-1 px-2">绝对值（极稳定）</td></tr>
+                <tr class="border-t border-cyan-100"><td class="py-1 px-2 font-bold text-emerald-700">高</td><td class="py-1 px-2">平台业务</td><td class="py-1 px-2 text-right">10,218</td><td class="py-1 px-2 text-right">15.7%</td><td class="py-1 px-2 text-right">74.2%</td><td class="py-1 px-2">绝对值+高值检测</td></tr>
+                <tr class="border-t border-cyan-100"><td class="py-1 px-2 font-bold text-emerald-700">高</td><td class="py-1 px-2">商城搜索</td><td class="py-1 px-2 text-right">5,564</td><td class="py-1 px-2 text-right">15.2%</td><td class="py-1 px-2 text-right">78.1%</td><td class="py-1 px-2">绝对值（稳定）</td></tr>
+                <tr class="border-t border-cyan-100"><td class="py-1 px-2 font-bold text-emerald-700">高</td><td class="py-1 px-2">商城订单</td><td class="py-1 px-2 text-right">4,967</td><td class="py-1 px-2 text-right text-emerald-600 font-bold">7.9%</td><td class="py-1 px-2 text-right">91.0%</td><td class="py-1 px-2">绝对值（极稳定）</td></tr>
+                <tr class="border-t border-cyan-100 bg-amber-50/30"><td class="py-1 px-2 font-bold text-amber-700">中</td><td class="py-1 px-2">BBC合单</td><td class="py-1 px-2 text-right">1,668</td><td class="py-1 px-2 text-right">34.2%</td><td class="py-1 px-2 text-right">71.2%</td><td class="py-1 px-2">绝对值+连续低位</td></tr>
+                <tr class="border-t border-cyan-100"><td class="py-1 px-2 font-bold text-amber-700">中</td><td class="py-1 px-2">汽车</td><td class="py-1 px-2 text-right">685</td><td class="py-1 px-2 text-right text-emerald-600 font-bold">7.9%</td><td class="py-1 px-2 text-right">87.1%</td><td class="py-1 px-2">绝对值（稳定）</td></tr>
+                <tr class="border-t border-cyan-100"><td class="py-1 px-2 font-bold text-amber-700">中</td><td class="py-1 px-2">触达</td><td class="py-1 px-2 text-right">664</td><td class="py-1 px-2 text-right">35.8%</td><td class="py-1 px-2 text-right">63.6%</td><td class="py-1 px-2">绝对值+连续低位</td></tr>
+                <tr class="border-t border-cyan-100 bg-blue-50/30"><td class="py-1 px-2 font-bold text-blue-700">低</td><td class="py-1 px-2">其他/保险服务/小程序</td><td class="py-1 px-2 text-right">~</td><td class="py-1 px-2 text-right">~</td><td class="py-1 px-2 text-right">~</td><td class="py-1 px-2">趋势为主</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </details>
+
+        <p class="text-[10px] text-gray-400 mt-3">📌 方案制定：2026-07-28 · 基线数据：30天去异常后（IQR法） · 建议每月初滚动更新基线</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 个人思考（交互式折叠卡片） -->
+  <section>
+    <h2 class="text-2xl font-bold mb-5 gradient-text flex items-center gap-2"><span>💭</span> 个人思考</h2>
+    <p class="text-sm text-gray-500 mb-4">点击卡片展开阅读完整思考 ↓</p>
+
+    <div class="space-y-3" id="thoughts">
+      <div class="thought-card bg-white/70 backdrop-blur-sm rounded-2xl border-2 border-pink-100 p-5" onclick="toggleThought(this)">
+        <div class="flex items-center gap-3 mb-2"><div class="thought-num w-9 h-9 rounded-full bg-pink-100 text-pink-600 flex items-center justify-center font-bold text-sm shrink-0">01</div><h3 class="font-bold text-foreground flex-1 text-sm">赛道不分优劣，核心是依托岗位沉淀可迁移能力，主动挖掘行业价值</h3><span class="text-xs text-muted-foreground">展开 ▾</span></div>
+        <div class="thought-body"><div class="pt-3 border-t border-gray-100 text-sm text-gray-700 leading-relaxed space-y-3">
+          <p>两段实习覆盖<span class="highlight">AI互联网</span>、<span class="highlight">传统金融保险</span>两个完全不同的赛道，让我彻底打破"行业决定成长上限"的固有认知。</p>
+          <p>字节AI赛道贴合新兴热点，主打用户运营、品牌增长与产品冷启动，聚焦流量、用户、内容的精细化运营；而<span class="highlight">京东车险赛道</span>属于相对传统的金融行业，并非我最初的兴趣方向，且与日常互联网产品逻辑差异极大。</p>
+          <p>但这段经历让我深刻明白：<span class="highlight">行业只是工作载体，个人的方法论、执行力、策略思维才是终身可迁移的核心竞争力</span>。我没有因不熟悉、低兴趣而被动应付，而是主动深耕车险业务逻辑，跳出传统保险运营的固有模式，将互联网增长思维、产品迭代思维、AI数字化思维融入业务，在传统赛道做出精细化运营、数据化迭代的创新价值。</p>
+          <p>无论是新兴AI产品冷启动，还是传统车险业务增量提效，底层的<span class="highlight">用户思维、目标思维、复盘思维</span>完全互通，这也让我摆脱了对赛道的执念，学会在任何行业、任何岗位主动发挥自身优势，创造个人价值。</p>
+        </div></div>
+      </div>
+
+      <div class="thought-card bg-white/70 backdrop-blur-sm rounded-2xl border-2 border-blue-100 p-5" onclick="toggleThought(this)">
+        <div class="flex items-center gap-3 mb-2"><div class="thought-num w-9 h-9 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center font-bold text-sm shrink-0">02</div><h3 class="font-bold text-foreground flex-1 text-sm">善用AI工具赋能工作，以数字化思维实现高效提效、精准落地</h3><span class="text-xs text-muted-foreground">展开 ▾</span></div>
+        <div class="thought-body"><div class="pt-3 border-t border-gray-100 text-sm text-gray-700 leading-relaxed space-y-3">
+          <p>两段实习让我完整建立了<span class="highlight">"AI服务工作，工具赋能业务"</span>的核心工作思维，实现从人工低效执行到智能高效运营的升级。</p>
+          <p>在字节实习期间，面对海量社群运营、内容创作、用户答疑、数据复盘工作，我主动运用AI工具辅助内容产出、话术优化、用户需求梳理、数据汇总，大幅降低重复性工作成本，让自己将更多精力投入到活动策划、体系搭建、GTM策略优化等<span class="highlight">高价值工作</span>中。</p>
+          <p>延续这套思维，在京东实习期间，我不再局限于工具使用，而是<span class="highlight">进阶到AI业务落地</span>：主动设计车险对话Agent、AI猜保费创新产品链路，输出完整BRD与Demo方案；同时搭建AI数据预警体系，通过标准化的数据清洗、阈值计算、分级告警规则，实现业务指标异常自动化监控，替代传统人工盯盘、人工复盘的低效模式，提前捕捉业务流失节点、支撑策略快速迭代。</p>
+          <p>这让我深刻意识到，<span class="highlight">未来运营与产品工作，不仅是执行业务，更要懂工具、会赋能、能创新</span>，用数字化能力构建个人核心壁垒。</p>
+        </div></div>
+      </div>
+
+      <div class="thought-card bg-white/70 backdrop-blur-sm rounded-2xl border-2 border-emerald-100 p-5" onclick="toggleThought(this)">
+        <div class="flex items-center gap-3 mb-2"><div class="thought-num w-9 h-9 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center font-bold text-sm shrink-0">03</div><h3 class="font-bold text-foreground flex-1 text-sm">重塑沟通认知，深耕用户思维，学会借力用户资源、双向成长</h3><span class="text-xs text-muted-foreground">展开 ▾</span></div>
+        <div class="thought-body"><div class="pt-3 border-t border-gray-100 text-sm text-gray-700 leading-relaxed space-y-3">
+          <p>字节用户运营的核心工作，让我<span class="highlight">彻底跳出"单向服务用户"的浅层认知</span>，读懂了用户沟通、用户建联、用户借力的深层运营逻辑。</p>
+          <p>长期对接海内外C端开发者用户，让我学会换位思考，精准捕捉用户真实需求、痛点与期待，打磨高效、有温度的沟通方式；同时明白<span class="highlight">优质用户是产品最核心的资源</span>，通过建联核心活跃用户、优化激励体系、搭建用户社群生态，充分借力用户的专业能力、传播能力，助力产品冷启动、声量提升、社区生态完善。</p>
+          <p>更重要的是，我学会了<span class="highlight">处处皆可学习，人人皆是老师</span>。成长不止来源于上级的指导，更来自身边的同事、合作的用户、对接的跨部门伙伴。我主动向资深运营学习活动策划与社媒打法，向核心开发者学习产品使用痛点，向跨部门伙伴学习项目推进逻辑，在沟通、协作、对接中持续吸收经验，快速补齐自身能力短板，实现全方位成长。</p>
+        </div></div>
+      </div>
+
+      <div class="thought-card bg-white/70 backdrop-blur-sm rounded-2xl border-2 border-purple-100 p-5" onclick="toggleThought(this)">
+        <div class="flex items-center gap-3 mb-2"><div class="thought-num w-9 h-9 rounded-full bg-purple-100 text-purple-600 flex items-center justify-center font-bold text-sm shrink-0">04</div><h3 class="font-bold text-foreground flex-1 text-sm">稀缺资源下的高效协同，学会换位思考、价值驱动推进落地</h3><span class="text-xs text-muted-foreground">展开 ▾</span></div>
+        <div class="thought-body"><div class="pt-3 border-t border-gray-100 text-sm text-gray-700 leading-relaxed space-y-3">
+          <p>京东实习的产品策略工作，让我攻克了跨部门协同的核心难题。产研、设计资源长期饱和、排期紧张，单纯依靠岗位权限很难推动需求落地。</p>
+          <p>通过长期实践，我总结出<span class="highlight">高效的跨部门协同逻辑</span>：<span class="highlight">以业务价值为核心，用数据赋能需求，用细节降低协作成本</span>。所有需求落地前，优先量化业务收益、增量价值与风险痛点，让产研清晰认知需求优先级；拆分大型迭代需求，落地小成本、高回报的MVP版本；提前梳理问题清单、同步业务背景、主动跟进走查复盘，减少团队额外沟通成本。</p>
+          <p>学会<span class="highlight">换位思考、主动赋能合作方</span>，让资源有限的情况下，最大化推进业务落地。</p>
+        </div></div>
+      </div>
+
+      <div class="thought-card bg-white/70 backdrop-blur-sm rounded-2xl border-2 border-orange-100 p-5" onclick="toggleThought(this)">
+        <div class="flex items-center gap-3 mb-2"><div class="thought-num w-9 h-9 rounded-full bg-orange-100 text-orange-600 flex items-center justify-center font-bold text-sm shrink-0">05</div><h3 class="font-bold text-foreground flex-1 text-sm">高压多线程工作，搭建个人工作体系，实现高效统筹不慌乱</h3><span class="text-xs text-muted-foreground">展开 ▾</span></div>
+        <div class="thought-body"><div class="pt-3 border-t border-gray-100 text-sm text-gray-700 leading-relaxed space-y-3">
+          <p>两段实习均处于高强度、多线程的工作状态：字节同期并行社群运营、社区搭建、海外内容产出、GTM筹备多项工作；京东同步推进多份BRD撰写、项目迭代、数据监控、策略调整、跨部门评审等工作。</p>
+          <p>长期高压环境下，我搭建了<span class="highlight">成熟的个人工作方法论</span>：通过优先级分层、任务台账管理、流程标准化、重复工作工具化，区分紧急/重要任务，固化日常复盘、数据监控、需求跟进流程，用AI工具替代低效重复工作，预留风险缓冲空间，<span class="highlight">完美适配互联网快节奏、高强度的工作模式</span>，实现多任务高效统筹、零遗漏落地。</p>
+        </div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 其他技能 -->
+  <section>
+    <h2 class="text-2xl font-bold mb-5 gradient-text flex items-center gap-2"><span>✨</span> 其他技能</h2>
+    <div class="grid md:grid-cols-3 gap-4">
+      <div class="bg-white/80 backdrop-blur-sm rounded-2xl p-5 border border-pink-100 card-hover"><h3 class="font-bold mb-1">🌍 英语水平</h3><p class="text-sm">CET-6，IELTS（6.5）</p></div>
+      <div class="bg-white/80 backdrop-blur-sm rounded-2xl p-5 border border-purple-100 card-hover"><h3 class="font-bold mb-1">💻 数据分析</h3><p class="text-sm">熟练运用SQL，R，Stata</p></div>
+      <div class="bg-white/80 backdrop-blur-sm rounded-2xl p-5 border border-amber-100 card-hover"><h3 class="font-bold mb-1">📜 证书</h3><p class="text-sm">AFMA 金融证书</p></div>
+    </div>
+  </section>
+
+  <footer class="text-center py-6 text-xs text-gray-500">
+    <p>Made with 💖 by 王馨蔚 · 2026</p>
+    <p class="mt-1">18302819592@163.com · 178-4110-7250</p>
+  </footer>
+
+</main>
+
+<script>
+function toggleThought(el) {
+  const wasActive = el.classList.contains('active');
+  document.querySelectorAll('.thought-card').forEach(c => c.classList.remove('active'));
+  if (!wasActive) el.classList.add('active');
+  document.querySelectorAll('.thought-card').forEach(c => {
+    const span = c.querySelector('span:last-child');
+    if (span) span.textContent = c.classList.contains('active') ? '收起 ▴' : '展开 ▾';
+  });
+}
+</script>
+</body>
+</html>
