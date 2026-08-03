@@ -1,0 +1,54 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Ultra compress images
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq imagemagick
+          sudo sed -i 's/<policy domain="resource" name="memory" value="256MiB"\/>/<policy domain="resource" name="memory" value="1GiB"\/>/' /etc/ImageMagick-6/policy.xml
+          echo "=== 压缩前 ==="
+          du -sh public/images/
+          # JPG: quality 50% + max 800px
+          for f in public/images/*.jpg; do
+            convert "$f" -strip -quality 50% -resize '800x800>' JPEG:"$f"
+          done
+          # PNG: 保持PNG格式，用最佳压缩
+          for f in public/images/*.png; do
+            convert "$f" -strip -resize '800x800>' -colors 256 PNGOUT:"$f"
+            # 如果PNGOUT失败，用默认PNG压缩
+            convert "$f" -strip -resize '800x800>' -colors 128 PNG:"$f"
+          done
+          echo "=== 压缩后 ==="
+          du -sh public/images/
+          ls -lhS public/images/ | tail -15
+
+      - run: npm install
+      - run: npx vite build --base=/portfolio/
+      - uses: actions/configure-pages@v4
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./dist
+      - id: deployment
+        uses: actions/deploy-pages@v4

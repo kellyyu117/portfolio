@@ -1,0 +1,521 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>王馨蔚 · 手搓小作品</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          primary: { DEFAULT: '#ff6b6b', foreground: '#ffffff' },
+        },
+        fontFamily: {
+          cute: ['"Comic Sans MS"', '"Hiragino Maru Gothic ProN"', '"Yuanti SC"', '"PingFang SC"', 'sans-serif'],
+        },
+      },
+    },
+  };
+</script>
+<style>
+  body {
+    background: linear-gradient(180deg, #fff8e7 0%, #fef6e8 20%, #fff0e8 40%, #fef0f4 60%, #fff5e6 80%, #fff8e7 100%);
+    min-height: 100vh;
+    font-family: 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  }
+  .gradient-text {
+    background: linear-gradient(135deg, #ff6b6b, #ec4899, #f59e0b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .card-hover { transition: all 0.3s ease; }
+  .card-hover:hover { transform: translateY(-4px); box-shadow: 0 20px 40px rgba(255, 107, 107, 0.15); }
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-6px); }
+  }
+  .animate-float { animation: float 3s ease-in-out infinite; }
+  .tool-icon {
+    width: 56px; height: 56px;
+    border-radius: 12px;
+    display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    font-weight: bold;
+    color: white;
+    font-size: 14px;
+  }
+</style>
+</head>
+<body class="text-gray-800">
+
+<!-- Top Bar -->
+<header class="sticky top-0 bg-white/85 backdrop-blur-lg border-b border-pink-100 z-50">
+  <div class="max-w-5xl mx-auto px-6 py-3 flex items-center justify-between">
+    <div class="flex items-center gap-2">
+      <span class="text-2xl animate-float">✨</span>
+      <span class="font-bold text-lg gradient-text">王馨蔚 · 手搓小作品</span>
+    </div>
+    <a href="index.html" class="px-4 py-2 text-sm bg-gradient-to-r from-primary to-pink-400 text-white rounded-full shadow-md hover:shadow-lg transition-all">
+      ← 返回作品集
+    </a>
+  </div>
+</header>
+
+<main class="max-w-5xl mx-auto px-6 py-10 space-y-10">
+
+  <!-- Hero -->
+  <section class="text-center space-y-4">
+    <h1 class="text-4xl lg:text-5xl font-extrabold gradient-text" style="font-family: 'Comic Sans MS', 'Yuanti SC', sans-serif;">
+      🎨 手搓小作品集
+    </h1>
+    <p class="text-base text-gray-600 max-w-2xl mx-auto">
+      海报设计 · 文案撰写 · PPT 制作 —— 用心做的每一个小作品 ✨
+    </p>
+  </section>
+
+  <!-- Skill Kit - 软件图标 -->
+  <section>
+    <h2 class="text-2xl font-bold mb-5 flex items-center gap-2">
+      <span class="text-2xl">🧰</span>
+      <span class="gradient-text">Skill Kit · 工具箱</span>
+    </h2>
+
+    <div class="bg-white/80 backdrop-blur-sm rounded-3xl p-6 border-2 border-pink-100 shadow-sm">
+      <div class="grid grid-cols-4 sm:grid-cols-7 gap-4 justify-items-center">
+        <!-- Canva -->
+        <div class="flex flex-col items-center gap-2">
+          <div class="tool-icon" style="background: linear-gradient(135deg, #00C4CC, #7D2AE8);">Canva</div>
+          <span class="text-xs text-gray-600">Canva</span>
+        </div>
+        <!-- Xmind -->
+        <div class="flex flex-col items-center gap-2">
+          <div class="tool-icon" style="background: linear-gradient(135deg, #0066CC, #00CCFF);">X</div>
+          <span class="text-xs text-gray-600">Xmind</span>
+        </div>
+        <!-- 剪映 -->
+        <div class="flex flex-col items-center gap-2">
+          <div class="tool-icon" style="background: linear-gradient(135deg, #FF4D4F, #FF7A45);">剪映</div>
+          <span class="text-xs text-gray-600">剪映</span>
+        </div>
+        <!-- Lr -->
+        <div class="flex flex-col items-center gap-2">
+          <div class="tool-icon" style="background: linear-gradient(135deg, #33335F, #5A5A8F);">Lr</div>
+          <span class="text-xs text-gray-600">Lightroom</span>
+        </div>
+        <!-- Ps -->
+        <div class="flex flex-col items-center gap-2">
+          <div class="tool-icon" style="background: linear-gradient(135deg, #001E36, #31A8FF);">Ps</div>
+          <span class="text-xs text-gray-600">Photoshop</span>
+        </div>
+        <!-- Figma -->
+        <div class="flex flex-col items-center gap-2">
+          <div class="tool-icon" style="background: linear-gradient(135deg, #F24E1E, #A259FF);">F</div>
+          <span class="text-xs text-gray-600">Figma</span>
+        </div>
+        <!-- 秀米 -->
+        <div class="flex flex-col items-center gap-2">
+          <div class="tool-icon" style="background: linear-gradient(135deg, #FF6B9D, #C06DEF);">秀米</div>
+          <span class="text-xs text-gray-600">秀米</span>
+        </div>
+
+        <!-- MySQL -->
+        <div class="flex flex-col items-center gap-2">
+          <div class="tool-icon" style="background: linear-gradient(135deg, #00758F, #F29111);">SQL</div>
+          <span class="text-xs text-gray-600">MySQL</span>
+        </div>
+        <!-- R -->
+        <div class="flex flex-col items-center gap-2">
+          <div class="tool-icon" style="background: linear-gradient(135deg, #198CE7, #1E61B0);">R</div>
+          <span class="text-xs text-gray-600">R 语言</span>
+        </div>
+        <!-- Python -->
+        <div class="flex flex-col items-center gap-2">
+          <div class="tool-icon" style="background: linear-gradient(135deg, #3776AB, #FFD43B); color: #333;">Py</div>
+          <span class="text-xs text-gray-600">Python</span>
+        </div>
+        <!-- Stata -->
+        <div class="flex flex-col items-center gap-2">
+          <div class="tool-icon" style="background: linear-gradient(135deg, #1A4F7C, #2E7BB8);">Σα</div>
+          <span class="text-xs text-gray-600">Stata</span>
+        </div>
+        <!-- Word -->
+        <div class="flex flex-col items-center gap-2">
+          <div class="tool-icon" style="background: linear-gradient(135deg, #185ABD, #2B7CD3);">W</div>
+          <span class="text-xs text-gray-600">Word</span>
+        </div>
+        <!-- Excel -->
+        <div class="flex flex-col items-center gap-2">
+          <div class="tool-icon" style="background: linear-gradient(135deg, #107C41, #21A366);">XLS</div>
+          <span class="text-xs text-gray-600">Excel</span>
+        </div>
+        <!-- PPT -->
+        <div class="flex flex-col items-center gap-2">
+          <div class="tool-icon" style="background: linear-gradient(135deg, #C43E1C, #ED6C47);">PPT</div>
+          <span class="text-xs text-gray-600">PowerPoint</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 海报设计 -->
+  <section>
+    <h2 class="text-2xl font-bold mb-5 flex items-center gap-2">
+      <span class="text-2xl">🎨</span>
+      <span class="gradient-text">海报设计 · 海报作品集</span>
+    </h2>
+
+    <!-- ========== 子模块 1：车险页面 UI 设计（2x2便签纸错落）========== -->
+    <div class="mb-10 bg-gradient-to-br from-rose-50 via-amber-50 to-green-50 rounded-3xl p-6 lg:p-8 border-2 border-pink-200 shadow-sm relative overflow-hidden">
+      <div class="absolute top-4 right-4 text-xs font-bold text-rose-500 bg-white/80 px-3 py-1 rounded-full border border-rose-200">
+        04.03 / 04.15
+      </div>
+      <div class="absolute top-4 left-6 flex items-center gap-2">
+        <div class="w-2 h-2 rounded-full bg-red-500 animate-pulse"></div>
+        <span class="text-xs font-bold text-rose-600">LIVE</span>
+      </div>
+
+      <div class="flex items-center gap-3 mb-2 mt-6">
+        <span class="text-2xl">🐶</span>
+        <h3 class="text-xl font-bold text-foreground">车险页面 UI 设计</h3>
+        <span class="px-2.5 py-0.5 bg-red-100 text-red-700 rounded-full text-xs font-semibold">京东集团</span>
+      </div>
+      <p class="text-xs text-muted-foreground mb-5 ml-10">
+        日常车险首页氛围图 · 弹窗与半弹层 · 活动促销视觉物料
+      </p>
+
+      <!-- 2x2 整齐网格（参考OnePlus风格，统一高度）-->
+      <div class="grid grid-cols-2 gap-3 max-w-2xl mx-auto">
+        <!-- 清凉出行季 -->
+        <div class="relative aspect-[3/4]">
+          <div class="absolute -top-2 -left-2 z-10 px-2.5 py-1 bg-yellow-300 rounded-full text-[10px] font-bold text-yellow-900 shadow-md rotate-[-6deg]">
+            ⭐ 主氛围图
+          </div>
+          <div class="w-full h-full rounded-xl overflow-hidden border-[3px] border-white shadow-lg hover:shadow-2xl hover:scale-[1.02] transition-all duration-300" style="transform: rotate(-1.5deg);">
+            <img loading="lazy src="images/poster-jd-1.jpg" alt="清凉出行季" class="w-full h-full object-cover" />
+          </div>
+        </div>
+
+        <!-- 京东车主日 -->
+        <div class="relative aspect-[3/4]">
+          <div class="w-full h-full rounded-xl overflow-hidden border-[3px] border-white shadow-lg hover:shadow-2xl hover:scale-[1.02] transition-all duration-300" style="transform: rotate(1.5deg);">
+            <img loading="lazy src="images/poster-jd-4.jpg" alt="京东车主日" class="w-full h-full object-cover" />
+          </div>
+        </div>
+
+        <!-- 报价成功半弹层 -->
+        <div class="relative aspect-[3/4]">
+          <div class="w-full h-full rounded-xl overflow-hidden border-[3px] border-white shadow-lg hover:shadow-2xl hover:scale-[1.02] transition-all duration-300" style="transform: rotate(1.5deg);">
+            <img loading="lazy src="images/poster-jd-2.jpg" alt="报价成功半弹层" class="w-full h-full object-cover" />
+          </div>
+        </div>
+
+        <!-- 抽奖大转盘弹窗 -->
+        <div class="relative aspect-[3/4]">
+          <div class="w-full h-full rounded-xl overflow-hidden border-[3px] border-white shadow-lg hover:shadow-2xl hover:scale-[1.02] transition-all duration-300" style="transform: rotate(-1.5deg);">
+            <img loading="lazy src="images/poster-jd-3.jpg" alt="抽奖大转盘弹窗" class="w-full h-full object-cover" />
+          </div>
+        </div>
+      </div>
+
+      <div class="flex flex-wrap items-center justify-center gap-2 mt-6">
+        <span class="px-3 py-1 bg-white/90 border border-rose-200 rounded-full text-[10px] font-semibold text-rose-700">🎨 首页氛围图</span>
+        <span class="px-3 py-1 bg-white/90 border border-amber-200 rounded-full text-[10px] font-semibold text-amber-700">🎯 活动主视觉</span>
+        <span class="px-3 py-1 bg-white/90 border border-purple-200 rounded-full text-[10px] font-semibold text-purple-700">💬 浮层弹窗</span>
+        <span class="px-3 py-1 bg-white/90 border border-pink-200 rounded-full text-[10px] font-semibold text-pink-700">🎰 互动抽奖</span>
+      </div>
+    </div>
+
+    <!-- ========== 子模块 2：促销 & 活动海报（高度一致卡片墙）========== -->
+    <div class="bg-gradient-to-br from-blue-50 via-cyan-50 to-purple-50 rounded-3xl p-6 lg:p-8 border-2 border-blue-200 shadow-sm">
+      <div class="flex items-center gap-3 mb-2">
+        <span class="text-2xl">🏠</span>
+        <h3 class="text-xl font-bold text-foreground">促销 & 活动海报设计</h3>
+        <span class="px-2.5 py-0.5 bg-blue-100 text-blue-700 rounded-full text-xs font-semibold">自如 / 蓝凌</span>
+      </div>
+      <p class="text-xs text-muted-foreground mb-6 ml-10">
+        私域渠道推广 · 线下活动宣传物料 · <span class="text-blue-600 font-semibold">← 左右滑动浏览 →</span>
+      </p>
+
+      <!-- 横向滑动卡片墙（高度一致）-->
+      <div class="overflow-x-auto pb-4 -mx-2 px-2 scrollbar-thin" style="scrollbar-width: thin;">
+        <div class="flex gap-5 min-w-max items-stretch">
+
+          <!-- 自如海报 -->
+          <div class="w-72 shrink-0 group">
+            <div class="h-full bg-white rounded-2xl overflow-hidden border-2 border-blue-200 shadow-md hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 flex flex-col">
+              <div class="relative h-80 overflow-hidden bg-blue-50">
+                <img loading="lazy src="images/poster-ziru.png" alt="自如 - 邀友有礼" class="w-full h-full object-cover object-top" />
+                <div class="absolute top-3 right-3 px-2.5 py-1 bg-blue-500 text-white rounded-full text-xs font-bold shadow-md">
+                  私域裂变
+                </div>
+              </div>
+              <div class="p-4 flex-1 flex flex-col">
+                <h4 class="font-bold text-foreground text-sm mb-1">自如 · 邀友有礼</h4>
+                <p class="text-xs text-muted-foreground leading-relaxed flex-1">
+                  推荐好友预订房源，双方各得京东卡激励，驱动订单转化 <strong>31%</strong>。
+                </p>
+                <div class="flex items-center gap-1.5 mt-3 text-[10px]">
+                  <span class="px-2 py-0.5 bg-blue-50 text-blue-600 rounded-full">海报</span>
+                  <span class="px-2 py-0.5 bg-blue-50 text-blue-600 rounded-full">小红书</span>
+                  <span class="px-2 py-0.5 bg-blue-50 text-blue-600 rounded-full">私域</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 蓝凌活动海报（用新图，高度一致）-->
+          <div class="w-72 shrink-0 group">
+            <div class="h-full bg-white rounded-2xl overflow-hidden border-2 border-purple-200 shadow-md hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 flex flex-col">
+              <div class="relative h-80 overflow-hidden bg-purple-50">
+                <img loading="lazy src="images/poster-lanjing-new.png" alt="蓝凌 - 智塔产品体验官" class="w-full h-full object-cover object-top" />
+                <div class="absolute top-3 right-3 px-2.5 py-1 bg-purple-500 text-white rounded-full text-xs font-bold shadow-md">
+                  活动招募
+                </div>
+              </div>
+              <div class="p-4 flex-1 flex flex-col">
+                <h4 class="font-bold text-foreground text-sm mb-1">蓝凌 · 智塔产品体验官</h4>
+                <p class="text-xs text-muted-foreground leading-relaxed flex-1">
+                  2024 蓝凌产品体验会重庆站 · 智塔随需而变，长图海报招募。
+                </p>
+                <div class="flex items-center gap-1.5 mt-3 text-[10px]">
+                  <span class="px-2 py-0.5 bg-purple-50 text-purple-600 rounded-full">长图</span>
+                  <span class="px-2 py-0.5 bg-purple-50 text-purple-600 rounded-full">招募</span>
+                  <span class="px-2 py-0.5 bg-purple-50 text-purple-600 rounded-full">线下</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 文案撰写案例 -->
+          <div class="w-72 shrink-0 group">
+            <div class="h-full bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 p-6 flex flex-col justify-center text-white">
+              <div class="text-4xl mb-3">✍️</div>
+              <h4 class="text-lg font-bold mb-2">不只是图片<br/>还有文字</h4>
+              <p class="text-xs text-white/90 leading-relaxed mb-3 flex-1">
+                从海外英文社媒到公众号中文推文，从营销策划案到行业研究报告——我用文字讲故事。
+              </p>
+              <div class="text-[10px] text-white/70 border-t border-white/20 pt-2 mt-auto">
+                📌 32篇公众号 + 180+条海外社媒
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 文案撰写 -->
+  <section>
+    <h2 class="text-2xl font-bold mb-5 flex items-center gap-2">
+      <span class="text-2xl">✍️</span>
+      <span class="gradient-text">文案撰写 · 文字作品集</span>
+    </h2>
+
+    <div class="space-y-6">
+
+      <!-- ========== 上排：英文撰写 + 公众号 左右两栏 ========== -->
+      <div class="grid md:grid-cols-2 gap-5">
+
+        <!-- 英文撰写能力（左侧4图错落 + 右侧文字）-->
+        <div class="bg-white/80 backdrop-blur-sm rounded-2xl p-5 border-2 border-blue-100 card-hover">
+          <div class="flex items-start gap-3 mb-3">
+            <span class="text-3xl">🌍</span>
+            <div>
+              <h3 class="font-bold text-foreground">海外社媒英文文案</h3>
+              <p class="text-xs text-gray-500 mt-0.5">字节跳动 TRAE · 2025.12 - 2026.04</p>
+            </div>
+          </div>
+
+          <div class="flex gap-4 items-start">
+            <!-- 左侧4张图（错落）-->
+            <div class="shrink-0 relative w-28 h-36">
+              <div class="absolute top-0 left-0 w-14 h-16 rounded-lg overflow-hidden border-2 border-white shadow-md hover:scale-110 transition-transform" style="transform: rotate(-6deg);">
+                <img loading="lazy src="images/trae-1.png" alt="TRAE AI coding" class="w-full h-full object-cover" />
+              </div>
+              <div class="absolute top-1 right-0 w-14 h-16 rounded-lg overflow-hidden border-2 border-white shadow-md hover:scale-110 transition-transform" style="transform: rotate(5deg);">
+                <img loading="lazy src="images/trae-2.png" alt="TRAE Global Events" class="w-full h-full object-cover" />
+              </div>
+              <div class="absolute bottom-2 left-1 w-14 h-16 rounded-lg overflow-hidden border-2 border-white shadow-md hover:scale-110 transition-transform" style="transform: rotate(4deg);">
+                <img loading="lazy src="images/trae-3.png" alt="TRAE Anniversary" class="w-full h-full object-cover" />
+              </div>
+              <div class="absolute bottom-0 right-1 w-14 h-16 rounded-lg overflow-hidden border-2 border-white shadow-md hover:scale-110 transition-transform" style="transform: rotate(-4deg);">
+                <img loading="lazy src="images/trae-4.png" alt="TRAE OpenClaw" class="w-full h-full object-cover" />
+              </div>
+            </div>
+
+            <!-- 右侧文字 -->
+            <div class="flex-1 min-w-0">
+              <p class="text-xs text-gray-700 leading-relaxed mb-2">
+                负责 <strong>X / Instagram / LinkedIn</strong> 三大平台日常运营，搭建<strong>内容发布日历 + 五大核心内容模块</strong> SOP，制定<strong>专属内容审核 + 分发</strong>流程。
+              </p>
+              <p class="text-xs text-gray-700 leading-relaxed mb-2">
+                筛选国内优质内容，完成 <strong>50+ 条</strong>内容的海外适配翻译与本地化优化，<strong>累计输出 180+ 条</strong>优质英文内容，覆盖产品动态、技术干货、活动资讯。
+              </p>
+              <div class="text-[10px] text-gray-500 border-t border-gray-100 pt-2">
+                详情可关注：<a href="https://x.com/Trae_ai" target="_blank" class="text-blue-600 hover:underline font-mono">x.com/Trae_ai</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-3 flex flex-wrap gap-1.5">
+            <span class="px-2 py-0.5 bg-blue-50 text-blue-600 rounded-full text-[10px]">英文文案</span>
+            <span class="px-2 py-0.5 bg-blue-50 text-blue-600 rounded-full text-[10px]">本地化</span>
+            <span class="px-2 py-0.5 bg-blue-50 text-blue-600 rounded-full text-[10px]">GTM</span>
+          </div>
+        </div>
+
+        <!-- 公众号推文（顶部文字 + 底部3图左右滑动）-->
+        <div class="bg-white/80 backdrop-blur-sm rounded-2xl p-5 border-2 border-green-100 card-hover">
+          <div class="flex items-start gap-3 mb-3">
+            <span class="text-3xl">📱</span>
+            <div>
+              <h3 class="font-bold text-foreground">微信公众号推文</h3>
+              <p class="text-xs text-gray-500 mt-0.5">深圳蓝凌软件 · 西南大区</p>
+            </div>
+          </div>
+
+          <p class="text-xs text-gray-700 leading-relaxed mb-2">
+            具备公众号全流程运营能力，熟练运用<strong>秀米、PS</strong>等工具完成内容创作与排版优化。在蓝凌软件实习期间，<strong>独立策划撰写 32 篇</strong>公众号推文，涵盖产品解读、客户案例、活动回顾等多元主题。
+          </p>
+          <p class="text-xs text-gray-700 leading-relaxed mb-3">
+            通过优化标题吸引力与排版逻辑提升传播效果，使推文<strong>平均阅读量提升至 800+</strong>，较之前增长 <strong>50%</strong>。设计 <strong>18 张活动宣传海报</strong>，助力线下活动客户邀约与现场参与度提升。
+          </p>
+
+          <div class="overflow-x-auto pb-2 -mx-1 px-1" style="scrollbar-width: thin;">
+            <div class="flex gap-2 min-w-max">
+              <div class="w-20 shrink-0 rounded-lg overflow-hidden border border-green-200 shadow-sm hover:shadow-md transition-shadow">
+                <img loading="lazy src="images/gzh-1.jpg" alt="蓝凌公众号 1" class="w-full h-32 object-cover object-top" />
+              </div>
+              <div class="w-20 shrink-0 rounded-lg overflow-hidden border border-green-200 shadow-sm hover:shadow-md transition-shadow">
+                <img loading="lazy src="images/gzh-2.jpg" alt="蓝凌公众号 2" class="w-full h-32 object-cover object-top" />
+              </div>
+              <div class="w-20 shrink-0 rounded-lg overflow-hidden border border-green-200 shadow-sm hover:shadow-md transition-shadow">
+                <img loading="lazy src="images/gzh-3.jpg" alt="蓝凌公众号 3" class="w-full h-32 object-cover object-top" />
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-3 flex flex-wrap gap-1.5">
+            <span class="px-2 py-0.5 bg-green-50 text-green-600 rounded-full text-[10px]">中文文案</span>
+            <span class="px-2 py-0.5 bg-green-50 text-green-600 rounded-full text-[10px]">排版</span>
+            <span class="px-2 py-0.5 bg-green-50 text-green-600 rounded-full text-[10px]">秀米</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ========== 下排：其他内容撰写能力（左右布局：左侧标题/标签，右侧纯文字列表）========== -->
+      <div class="bg-white/80 backdrop-blur-sm rounded-2xl p-6 lg:p-8 border-2 border-amber-100 card-hover">
+        <div class="grid md:grid-cols-[260px_1fr] gap-8 items-start">
+          <!-- 左侧标题 -->
+          <div class="space-y-3">
+            <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-50 border border-amber-200">
+              <span class="text-base">📑</span>
+              <span class="text-xs font-medium text-amber-700">综合能力</span>
+            </div>
+            <h3 class="text-xl font-bold text-foreground flex items-center gap-2">
+              <span class="text-2xl">✨</span>
+              其他内容撰写能力
+            </h3>
+            <p class="text-xs text-muted-foreground leading-relaxed">
+              从营销策划到行业研究，从品牌创意到学术写作——文字能力的多面延伸。
+            </p>
+            <div class="flex flex-wrap gap-1.5 pt-2">
+              <span class="px-2 py-0.5 bg-amber-50 text-amber-700 rounded-full text-[10px]">营销策划</span>
+              <span class="px-2 py-0.5 bg-amber-50 text-amber-700 rounded-full text-[10px]">行业研究</span>
+              <span class="px-2 py-0.5 bg-amber-50 text-amber-700 rounded-full text-[10px]">品牌创意</span>
+              <span class="px-2 py-0.5 bg-amber-50 text-amber-700 rounded-full text-[10px]">学术写作</span>
+            </div>
+          </div>
+
+          <!-- 右侧纯文字列表 -->
+          <div class="space-y-4">
+            <div class="flex items-start gap-3 pb-4 border-b border-gray-100">
+              <span class="text-2xl shrink-0">🥛</span>
+              <div class="flex-1">
+                <h4 class="font-bold text-foreground text-sm">Z世代真果粒营销策划案</h4>
+                <p class="text-xs text-muted-foreground mt-0.5">本科期间策划作品</p>
+                <p class="text-xs text-gray-700 leading-relaxed mt-1.5">
+                  针对<strong>真果粒品牌Z世代目标人群</strong>的全案营销策划，包含用户洞察、创意概念、传播节奏、媒介组合等模块。
+                </p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3 pb-4 border-b border-gray-100">
+              <span class="text-2xl shrink-0">❄️</span>
+              <div class="flex-1">
+                <h4 class="font-bold text-foreground text-sm">冰雪行业研究方案</h4>
+                <p class="text-xs text-muted-foreground mt-0.5">行业洞察 + 策略建议</p>
+                <p class="text-xs text-gray-700 leading-relaxed mt-1.5">
+                  <strong>冰雪行业深度研究方案</strong>，包含市场规模、用户画像、竞争格局及品牌入局机会点分析。
+                </p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3 pb-4 border-b border-gray-100">
+              <span class="text-2xl shrink-0">🏆</span>
+              <div class="flex-1">
+                <h4 class="font-bold text-foreground text-sm">大学生创新创业计划</h4>
+                <p class="text-xs text-muted-foreground mt-0.5">本科期间 · 国家级立项</p>
+                <p class="text-xs text-gray-700 leading-relaxed mt-1.5">
+                  参与<strong>大学生创新创业计划</strong>，获得<strong>国家级立项</strong>。
+                </p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3">
+              <span class="text-2xl shrink-0">🥇</span>
+              <div class="flex-1">
+                <h4 class="font-bold text-foreground text-sm">第十四届中国风险管理与精算论坛</h4>
+                <p class="text-xs text-muted-foreground mt-0.5">本科期间 · 全国一等奖</p>
+                <p class="text-xs text-gray-700 leading-relaxed mt-1.5">
+                  撰写<strong>「千里烟波」农业收入保险产品设计策划案</strong>，聚焦立体农业与复合种植场景，借鉴美国全农场收入保障模式完成产品方案设计，荣获<strong>全国一等奖</strong>。
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- PPT 制作（四宫格） -->
+  <section>
+    <h2 class="text-2xl font-bold mb-5 flex items-center gap-2">
+      <span class="text-2xl">📊</span>
+      <span class="gradient-text">PPT 制作 · 演示作品集</span>
+    </h2>
+
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+      <div class="relative aspect-[16/10] rounded-xl overflow-hidden border-2 border-white shadow-md hover:shadow-xl hover:scale-[1.03] transition-all duration-300 group" style="transform: rotate(-1deg);">
+        <img loading="lazy src="images/ppt-1.jpg" alt="PPT作品 1" class="w-full h-full object-cover object-top" />
+        <div class="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+      </div>
+      <div class="relative aspect-[16/10] rounded-xl overflow-hidden border-2 border-white shadow-md hover:shadow-xl hover:scale-[1.03] transition-all duration-300 group" style="transform: rotate(1.5deg);">
+        <img loading="lazy src="images/ppt-2.png" alt="PPT作品 2" class="w-full h-full object-cover object-top" />
+        <div class="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+      </div>
+      <div class="relative aspect-[16/10] rounded-xl overflow-hidden border-2 border-white shadow-md hover:shadow-xl hover:scale-[1.03] transition-all duration-300 group" style="transform: rotate(1deg);">
+        <img loading="lazy src="images/ppt-3.png" alt="PPT作品 3" class="w-full h-full object-cover object-top" />
+        <div class="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+      </div>
+      <div class="relative aspect-[16/10] rounded-xl overflow-hidden border-2 border-white shadow-md hover:shadow-xl hover:scale-[1.03] transition-all duration-300 group" style="transform: rotate(-1.5deg);">
+        <img loading="lazy src="images/ppt-4.jpg" alt="PPT作品 4" class="w-full h-full object-cover object-top" />
+        <div class="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center py-6 text-xs text-gray-500">
+    <p>Made with 💖 by 王馨蔚 · 2026</p>
+  </footer>
+
+</main>
+
+</body>
+</html>
