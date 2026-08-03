@@ -1,0 +1,8 @@
+name = "kellyyu117-portfolio"
+compatibility-date = "2026-08-01"
+pages_build_output_dir = "./dist"
+
+# Cloudflare Pages 项目配置
+# 文档：https://developers.cloudflare.com/pages/functions/wrangler-configuration/
+# Dashboard 配置时，本文件的 pages_build_output_dir 字段会被读取；
+# 完整 build command、environment variables 等建议在 Dashboard "Build" 设置里配置。
